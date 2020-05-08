@@ -4,6 +4,29 @@
     <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
     <title>Contatos</title>
     <meta charset="UTF-8">
+    <script type="text/javascript">
+      function validar_form_contato(){
+       var primeironome = formcontato.firstname.value;
+       var ultimonome = formcontato.lastname.value;
+       var mensagem = formcontato.mensagem.value;
+
+       if (primeironome == "") {
+         alert("Campo nome é obrigatorio!");
+          formcontato.firstname.focus();
+          return false;
+         }
+         if (ultimonome == "") {
+         alert("Campo sobrenome é obrigatorio!");
+          formcontato.lastname.focus();
+          return false;
+         }
+         if (mensagem == "") {
+         alert("Campo mensagem é obrigatorio!");
+          formcontato.mensagem.focus();
+          return false;
+         }
+    }
+    </script>
 </head>
 <body>
   <ul>
@@ -21,7 +44,7 @@
    </ul>
 <h2 class="faleconosco">Fale conosco</h2>
 <div class="container">
-  <form action="#">
+  <form name="formcontato" action="#">
   <div class="row">
     <div class="col-25">
       <label for="fname">Primeiro Nome</label>
@@ -60,7 +83,7 @@
     </div>
   </div>
   <div class="row">
-    <input type="submit" value="Enviar">
+    <input type="submit" value="Enviar" onclick="return validar_form_contato()">
   </div>
   </form>
 </div>
