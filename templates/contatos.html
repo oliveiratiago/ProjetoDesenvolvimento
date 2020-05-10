@@ -7,7 +7,7 @@
     <script type="text/javascript">
       function validar_form_contato(){
        var primeironome = formcontato.firstname.value;
-       var ultimonome = formcontato.lastname.value;
+       var contact_email = formcontato.email.value;
        var mensagem = formcontato.mensagem.value;
 
        if (primeironome == "") {
@@ -15,9 +15,9 @@
           formcontato.firstname.focus();
           return false;
          }
-         if (ultimonome == "") {
-         alert("Campo sobrenome é obrigatorio!");
-          formcontato.lastname.focus();
+         if (contact_email == "") {
+         alert("Campo E-mail é obrigatorio!");
+          formcontato.email.focus();
           return false;
          }
          if (mensagem == "") {
@@ -55,7 +55,7 @@
   <form name="formcontato" action="#">
   <div class="row">
     <div class="col-25">
-      <label for="fname">Primeiro Nome</label>
+      <label for="fname">Nome</label>
     </div>
     <div class="col-75">
       <input type="text" id="fname" name="firstname" placeholder="Seu nome">
@@ -63,10 +63,10 @@
   </div>
   <div class="row">
     <div class="col-25">
-      <label for="lname">Sobrenome</label>
+      <label for="email">E-mail</label>
     </div>
     <div class="col-75">
-      <input type="text" id="lname" name="lastname" placeholder="Sobrenome">
+      <input type="text" id="email" name="email" placeholder="E-mail">
     </div>
   </div>
   <div class="row">
