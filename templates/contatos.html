@@ -24,7 +24,8 @@
          alert("Campo mensagem é obrigatorio!");
           formcontato.mensagem.focus();
           return false;
-         }
+          }
+          alert("Mensagem enviada com sucesso")
     }
     </script>
 </head>
@@ -42,6 +43,13 @@
     </li>
     <li><a href="contatos">Contato</a></li>
    </ul>
+
+<table>
+    <td>
+        <tr><img src="{{url_for('static', filename='contato.jpg')}}" width=100% height=150 align="middle" /></tr>
+        </td>
+</table>
+
 <h2 class="faleconosco">Fale conosco</h2>
 <div class="container">
   <form name="formcontato" action="#">
@@ -86,6 +94,16 @@
     <input type="submit" value="Enviar" onclick="return validar_form_contato()">
   </div>
   </form>
+</div>
+
+
+
+<div class="footer-address">
+Escola de Gastronomia da Vila <br>
+Avenida Rudge, 164 1º andar, Barra Funda
+<br>São Paulo ,&nbsp;SP ,&nbsp;&nbsp;01206-001
+<br>Brasil
+<br>Telefone: <a href="tel:+55 11 2150-2500">+55 11 2150-2500</a>
 </div>
 
 </body>
