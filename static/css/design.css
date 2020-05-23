@@ -114,3 +114,8 @@ input[type=submit]:hover {
 .faleconosco{
     text-align: center;
 }
+
+.container {
+  width: 80%;
+  margin: 15px auto;
+}

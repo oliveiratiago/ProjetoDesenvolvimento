@@ -40,5 +40,8 @@ def curso3():
 def curso4():
     return render_template('curso4.html')
 
+@app.route('/estatisticas')
+def estatisticas():
+    return render_template('estatisticas.html')
 
 app.run(debug=True)
